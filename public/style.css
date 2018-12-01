@@ -1,0 +1,168 @@
+body {
+  background-color: #424951;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 80px 1fr 80px;
+      grid-template-rows: 80px 1fr 80px;
+}
+
+.navbar {
+  min-height: 30px;
+  position: fixed;
+}
+
+.navbar .navbar-brand {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  height: 60px;
+  line-height: 60px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.navbar #thermometer {
+  font-size: 43px;
+  font-weight: 600;
+}
+
+.navbar #barometer {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+#weather-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#weather-container .row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+#weather-container .jumbotron {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+#weather-container #city {
+  font-family: "Cabin", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+#weather-container #top-details #weather-icon {
+  font-size: 80px;
+}
+
+@media (max-width: 325px) {
+  #weather-container #top-details #weather-icon {
+    font-size: 60px;
+  }
+}
+
+#weather-container #top-details #temp-row #temp {
+  font-family: "Cabin", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+@media (max-width: 325px) {
+  #weather-container #top-details #temp-row #temp {
+    font-size: 35px;
+  }
+}
+
+#weather-container #top-details #temp-row .degree {
+  font-size: 35px;
+}
+
+@media (max-width: 325px) {
+  #weather-container #top-details #temp-row .degree {
+    font-size: 32px;
+  }
+}
+
+#weather-container #description {
+  font-family: "Cabin", sans-serif;
+  font-weight: 400;
+  font-size: 23px;
+}
+
+#weather-container #bottom-details {
+  visibility: hidden;
+}
+
+#weather-container #bottom-details .detail-col {
+  margin: 0 15px 0 15px;
+}
+
+@media (max-width: 325px) {
+  #weather-container #bottom-details .detail-col {
+    margin: 0 10px 0 10px;
+  }
+}
+
+#weather-container #bottom-details .detail-icons {
+  font-size: 27px;
+}
+
+@media (max-width: 325px) {
+  #weather-container #bottom-details .detail-icons {
+    font-size: 18px;
+  }
+}
+
+#weather-container #bottom-details .detail-font {
+  font-family: "Cabin", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+@media (max-width: 325px) {
+  #weather-container #bottom-details .detail-font {
+    font-size: 15px;
+  }
+}
+
+#weather-container .btn {
+  width: 100px;
+  background-color: #343a40;
+  color: white;
+  visibility: hidden;
+}
+
+.caps {
+  text-transform: capitalize;
+}
+
+#byKevin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Cabin", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+/*# sourceMappingURL=style.css.map */

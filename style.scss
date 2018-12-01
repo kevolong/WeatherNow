@@ -1,0 +1,159 @@
+body {
+  background-color: #424951;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 80px 1fr 80px;
+}
+
+//Navbar with Logo
+.navbar {
+  min-height: 30px;
+  position: fixed;
+
+  //Weather Now text and icons
+  .navbar-brand {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    height: 60px;
+    line-height: 60px;
+    font-family: "Cabin", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+  }
+
+  //Therometer icon
+  #thermometer {
+    font-size: 43px;
+    font-weight: 600;
+  }
+
+  //Barometer icon
+  #barometer {
+    font-size: 30px;
+    font-weight: 800;
+  }
+}
+
+//Bootstrap container for weather box
+#weather-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //Bootstrap Row
+  .row {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  //Bootstrap jumbotron
+  .jumbotron {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+  }
+
+  //City and country
+  #city {
+    font-family: "Cabin", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+  }
+
+  //Weather Icon and temperature
+  #top-details {
+    //Weather Icon
+    #weather-icon {
+      font-size: 80px;
+
+      @media (max-width: 325px) {
+        font-size: 60px;
+      }
+    }
+    //Temperature and Degree
+    #temp-row {
+      //Temperature text
+      #temp {
+        font-family: "Cabin", sans-serif;
+        font-weight: 500;
+        font-size: 40px;
+
+        @media (max-width: 325px) {
+          font-size: 35px;
+        }
+      }
+      // Degree icon
+      .degree {
+        font-size: 35px;
+
+        @media (max-width: 325px) {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+
+  //Weather description
+  #description {
+    font-family: "Cabin", sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+  }
+
+  //Row of humidity, wind and visibility
+  #bottom-details {
+    visibility: hidden;
+
+    .detail-col {
+      margin: 0 15px 0 15px;
+
+      @media (max-width: 325px) {
+        margin: 0 10px 0 10px;
+      }
+    }
+
+    //Font Awesome icon
+    .detail-icons {
+      font-size: 27px;
+      @media (max-width: 325px) {
+        font-size: 18px;
+      }
+    }
+
+    //Font
+    .detail-font {
+      font-family: "Cabin", sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+
+      @media (max-width: 325px) {
+        font-size: 15px;
+      }
+    }
+  }
+  //Imperial and Metric buttons
+  .btn {
+    width: 100px;
+    background-color: #343a40;
+    color: white;
+    visibility: hidden;
+  }
+} // end of #weather-container
+
+.caps {
+  text-transform: capitalize;
+}
+
+//By Kevin Footer
+#byKevin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cabin", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}

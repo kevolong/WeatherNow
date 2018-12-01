@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" href="https://erikflowers.github.io/weather-icons/css/weather-icons.min.css" />
+    <link rel="stylesheet" href="https://erikflowers.github.io/weather-icons/css/weather-icons-wind.min.css" />
+    <link rel="stylesheet" href="public/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>Weather Now</title>
+  </head>
+
+  <body>
+    <!-- Weather Title Nav -->
+
+    <div>
+      <nav class="navbar fixed-top navbar-dark bg-dark py-0">
+        <h1 id="weather" class="navbar-brand mx-auto">
+          Wea<i id="thermometer" class="wi wi-thermometer-exterior wi-flip-vertical"></i>her N<i
+            id="barometer"
+            class="wi wi-barometer"
+          ></i
+          >w
+        </h1>
+      </nav>
+    </div>
+
+    <div id="weather-container">
+      <div class="container">
+        <div class="row justify-content-center">
+          <!-- Jumbotron for weather info -->
+          <div class="jumbotron col-11 col-md-7 col-lg-5 border border-secondary py-4">
+            <p id="city" class="text-center caps">Finding your location...</p>
+
+            <!-- icon and temp -->
+            <div id="top-details" class="row justify-content-center align-items-center">
+              <div class="col-xs-auto mx-3 align-self-center"><i id="weather-icon" class=""></i></div>
+              <div class="col-xs-auto mx-3 mt-3 align-self-center">
+                <div id="temp-row" class="row justify-content-center align-items-start">
+                  <div class="col-xs-auto"><p id="temp"></p></div>
+                  <div class="col-xs-auto mx-1 mt-2"><i id="degree-scale" class=""></i></div>
+                </div>
+              </div>
+            </div>
+            <!-- end of row icons and temp -->
+
+            <!-- Description -->
+            <p id="description" class="text-center caps mt-3"></p>
+
+            <!-- Humidity / Wind / Visibility -->
+            <div id="bottom-details" class="row justify-content-center text-center align-items-start mt-3">
+              <div class="col-xs-auto detail-col">
+                <i class="wi wi-humidity detail-icons"></i>
+                <p id="humidity" class="detail-font"></p>
+              </div>
+              <div class="col-xs-auto detail-col">
+                <i class="wi wi-strong-wind detail-icons"></i>
+                <p id="wind-speed" class="detail-font"></p>
+              </div>
+
+              <div class="col-xs-auto detail-col">
+                <i id="wind-dir-icon" class="wi wi-wind wi-towards-n detail-icons"></i>
+                <p id="wind-dir" class="detail-font"></p>
+              </div>
+
+              <div class="col-xs-auto detail-col">
+                <i class="fas fa-eye detail-icons"></i>
+                <p id="visibility" class="detail-font"></p>
+              </div>
+            </div>
+            <!-- end of row humdity/wind/visibility -->
+
+            <!-- Buttons -->
+            <div id="button-row" class="row justify-content-center">
+              <button type="button" id="imperial" class="btn active mx-1" disabled>Imperial</button>
+              <button type="button" id="metric" class="btn mx-1">Metric</button>
+            </div>
+          </div>
+          <!-- End of jumbotron -->
+        </div>
+        <!-- End of row of everything -->
+      </div>
+    </div>
+    <!-- End of main container -->
+
+    <div id="byKevin" class="text-center mt-2">
+      <p>by <a href="https://kevinandrewlong.com" target="_blank" style="color: white">kevin long</a></p>
+    </div>
+
+    <script src="public/app.js"></script>
+  </body>
+</html>
