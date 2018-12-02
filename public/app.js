@@ -16,11 +16,10 @@ function getLocation() {
     navigator.geolocation.getCurrentPosition(function(position) {
       latitude = position.coords.latitude;
       longitude = position.coords.longitude;
-
       displayWeather();
     });
   } else {
-    $("#city").html("Enable location data or else I can't help you!");
+    $("#loading-message").html("Enable location data or else I can't help you!");
   }
 }
 
@@ -36,6 +35,9 @@ function displayWeather() {
     success: function(result) {
       currentWeather = result;
 
+      //Hide loading message
+      $("#loading-jumbo").css("display", "none");
+
       //Check time of day
       if (currentWeather.dt >= currentWeather.sys.sunrise && currentWeather.dt <= currentWeather.sys.sunset) {
         timeOfDay = "day";
@@ -47,6 +49,9 @@ function displayWeather() {
       setBackground();
 
       //Make hidden stuff visible
+      $("#weather-jumbo")
+        .css("display", "block")
+        .addClass("animated fadeIn");
       $(".btn").css("visibility", "visible");
       $("#bottom-details").css("visibility", "visible");
 
@@ -93,8 +98,6 @@ function displayWeather() {
         visKilometers = String(Math.round(currentWeather.visibility / 1000)) + " km";
       }
       $("#visibility").html(visMiles);
-
-      //$("#json").html(JSON.stringify(currentWeather));
     }
   });
 }
@@ -210,7 +213,14 @@ function setBackground() {
       image = "public/assets/tornado_night.jpg";
     }
   }
-  $("body").css("background-image", "url('" + image + "')");
+  $("body")
+    .css("background-image", "url('" + image + "')")
+    .animate(
+      {
+        opacity: 1
+      },
+      1000
+    );
 }
 
 //Convert wind degrees to directions

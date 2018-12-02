@@ -36,8 +36,18 @@
       <div class="container">
         <div class="row justify-content-center">
           <!-- Jumbotron for weather info -->
-          <div class="jumbotron col-11 col-md-7 col-lg-5 border border-secondary py-4">
-            <p id="city" class="text-center caps">Finding your location...</p>
+          <div id="loading-jumbo" class="jumbotron col-11 col-md-7 col-lg-5 border border-secondary py-4">
+            <div id="loading-message">
+              <p>Finding your location</p>
+              <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+              </div>
+            </div>
+          </div>
+          <div id="weather-jumbo" class="jumbotron col-11 col-md-7 col-lg-5 border border-secondary py-4">
+            <p id="city" class="text-center caps"></p>
 
             <!-- icon and temp -->
             <div id="top-details" class="row justify-content-center align-items-center">
